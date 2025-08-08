@@ -1,13 +1,11 @@
 fineract:
   datasource:
     core:
-      host: operations-mysql
-#      host: "127.0.0.1"
-      port: 3306
-      schema: tenants
-      username: root
-      password: mysql
-#      password: "ethieTieCh8ahv"
+      host: ${DB_HOST:mysql}
+      port: ${DB_PORT:3306}
+      schema: ${DB_SCHEMA:tenants}
+      username: ${DB_USER:fineract}
+      password: ${DB_PASS:fineract}
     common:
       protocol: jdbc
       subprotocol: mysql
